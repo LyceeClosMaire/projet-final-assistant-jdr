@@ -51,8 +51,7 @@ while running:
 
     if menu_bas.collidepoint(pygame.mouse.get_pos()):
         if pygame.mouse.get_pressed()[0]:
-
-                print("bite")
+               print("bite")
 
 
     pygame.draw.rect(screen,(0    ,0    ,0  ),menu_bas)
@@ -78,8 +77,9 @@ while running:
     rectangle4 = pygame.Rect(750, 625, 150, 150)
     pygame.draw.rect(screen, (0 ,0  ,0  ),rectangle4)
 
-    rectangle5 = pygame.Rect(950, 625, 150, 150)
-    pygame.draw.rect(screen, (0 ,0  ,0  ),rectangle5)
+    rect5 = pygame.Rect(950, 625, 150, 150)
+    rectangle5 = pygame.draw.rect(screen, (0 ,0  ,0  ),rect5)
+
 # ####################################
 # #Déplacer mon perso de façon fluide#
 
@@ -110,6 +110,9 @@ while running:
 # #####################################
 
 
+        if event.type == bouton_menu.collidepoint(pygame.mouse.get_pos()):
+
+            print('test')
 # ####Déplacer un perso###
 
         if event.type == pygame.MOUSEBUTTONDOWN: #Quand j'appuie
